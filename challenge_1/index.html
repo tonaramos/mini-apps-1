@@ -1,2 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tic Tac Toe!</title>
+  <style type="text/css">
+	  table {
+	  	height: 200px;
+	  	width: 200px;
+	  }
+    
+    tr{
+     	 
+    }
 
+    td {
+	  	border: 2px solid;
+	    text-align: center;
+      font-family: verdana;
+      font-size: 250%;
+    }
 
+  </style>
+  <script type="text/javascript" src="./app.js"></script>
+</head>
+<body>
+  <table id="table">
+    <tr>
+      <td class="cell" id="a1" onClick="takeTurn(this.id)" >H</td>
+      <td class="cell" id="a2" onClick="takeTurn(this.id)" >H</td>
+      <td class="cell" id="a3" onClick="takeTurn(this.id)" >H</td>
+    </tr>
+    <tr>
+      <td class="cell" id="b1" onClick="takeTurn(this.id)" >H</td>
+      <td class="cell" id="b2" onClick="takeTurn(this.id)" >H</td>
+      <td class="cell" id="b3" onClick="takeTurn(this.id)" >H</td>
+    </tr>
+    <tr>
+      <td class="cell" id="c1" onClick="takeTurn(this.id)" >H</td>
+      <td class="cell" id="c2" onClick="takeTurn(this.id)" >H</td>
+      <td class="cell" id="c3" onClick="takeTurn(this.id)" >H</td>
+    </tr>
+  </table>
+</body>
+</html>
