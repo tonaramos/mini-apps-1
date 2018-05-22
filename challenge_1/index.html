@@ -37,9 +37,7 @@
       font-family: verdana;
       font-size: 250%;
     }
-
   </style>
-  <script type="text/javascript" src="./app.js"></script>
 </head>
   <header id="header">TIC TAC TOE</header>
 <div></div>
@@ -48,21 +46,25 @@
   <div id="main">
   <table id="table">
     <tr>
-      <td class="cell" id="a1" onClick="takeTurn(this.id)" ></td>
-      <td class="cell" id="a2" onClick="takeTurn(this.id)" ></td>
-      <td class="cell" id="a3" onClick="takeTurn(this.id)" ></td>
+      <td class="cell" id="a1" ></td>
+      <td class="cell" id="a2" ></td>
+      <td class="cell" id="a3" ></td>
     </tr>
     <tr>
-      <td class="cell" id="b1" onClick="takeTurn(this.id)" ></td>
-      <td class="cell" id="b2" onClick="takeTurn(this.id)" ></td>
-      <td class="cell" id="b3" onClick="takeTurn(this.id)" ></td>
+      <td class="cell" id="b1" ></td>
+      <td class="cell" id="b2" ></td>
+      <td class="cell" id="b3" ></td>
     </tr>
     <tr>
-      <td class="cell" id="c1" onClick="takeTurn(this.id)" ></td>
-      <td class="cell" id="c2" onClick="takeTurn(this.id)" ></td>
-      <td class="cell" id="c3" onClick="takeTurn(this.id)" ></td>
+      <td class="cell" id="c1" ></td>
+      <td class="cell" id="c2" ></td>
+      <td class="cell" id="c3" ></td>
     </tr>
   </table>
 </div>
+<div>
+  <button type="button" id="button">Reset Game!</button>
+</div>
+  <script type="text/javascript" src="./app.js"></script>
 </body>
 </html>
