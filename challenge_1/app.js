@@ -34,6 +34,9 @@ let takeTurn = function (id) {
 
 
 let checkWinner = function() {
+
+resetBoard();
+
 let scoreBoard = [
 [cells.a1, cells.a2, cells.a3],
 [cells.b1, cells.b2, cells.b3],
@@ -44,7 +47,7 @@ let scoreBoard = [
 [cells.a1, cells.b2, cells.c3],
 [cells.a3, cells.b2, cells.c1]
 ];
-  console.log(scoreBoard);
+  
 
   for (let i = 0; i < scoreBoard.length; i++) {
     console.log('forlooprunning');
@@ -64,8 +67,22 @@ let scoreBoard = [
   }  
   if(gameOver) {
     console.log('gameOver, playAgain!')
+    for (let key in obj){
+      obj[key] = null;
+    }
+
   }
- // console.log(scoreBoard)
+}
+
+let resetBoard = function () {
+
+  let allCellElements = document.getElementsByTagName('td');
+  console.log(allCellElements);
+
+  for (var i = 0; i < allCellElements.length; i++) {
+    allCellElements[i].innerHTML = 'Y';
+  }
+  
 }
 
 
