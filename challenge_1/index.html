@@ -3,16 +3,35 @@
 <head>
   <title>Tic Tac Toe!</title>
   <style type="text/css">
-	  table {
-	  	height: 200px;
-	  	width: 200px;
+	  #main {
+      display: flex;
+      justify-content: space-between;
+      
+    }
+    table {
+	  	height: 210px;
+	  	width: 210px;
+      table-layout: fixed;
 	  }
     
-    tr{
-     	 
+    header {
+      height: 80px;
+     	text-align: center;
+      font-family: verdana;
+      font-size: 30px;
+      display: flex;
+      justify-content: space-between;
+      table-layout: fixed;
+    }
+
+    #turnDisplay {
+       font-family: verdana;
+      font-size: 15px;
     }
 
     td {
+      height: 70px;
+      width: 70px;
 	  	border: 2px solid;
 	    text-align: center;
       font-family: verdana;
@@ -22,23 +41,28 @@
   </style>
   <script type="text/javascript" src="./app.js"></script>
 </head>
+  <header id="header">TIC TAC TOE</header>
+<div></div>
 <body>
+  <div id="turnDisplay">Player X turn!</div>
+  <div id="main">
   <table id="table">
     <tr>
-      <td class="cell" id="a1" onClick="takeTurn(this.id)" >H</td>
-      <td class="cell" id="a2" onClick="takeTurn(this.id)" >H</td>
-      <td class="cell" id="a3" onClick="takeTurn(this.id)" >H</td>
+      <td class="cell" id="a1" onClick="takeTurn(this.id)" ></td>
+      <td class="cell" id="a2" onClick="takeTurn(this.id)" ></td>
+      <td class="cell" id="a3" onClick="takeTurn(this.id)" ></td>
     </tr>
     <tr>
-      <td class="cell" id="b1" onClick="takeTurn(this.id)" >H</td>
-      <td class="cell" id="b2" onClick="takeTurn(this.id)" >H</td>
-      <td class="cell" id="b3" onClick="takeTurn(this.id)" >H</td>
+      <td class="cell" id="b1" onClick="takeTurn(this.id)" ></td>
+      <td class="cell" id="b2" onClick="takeTurn(this.id)" ></td>
+      <td class="cell" id="b3" onClick="takeTurn(this.id)" ></td>
     </tr>
     <tr>
-      <td class="cell" id="c1" onClick="takeTurn(this.id)" >H</td>
-      <td class="cell" id="c2" onClick="takeTurn(this.id)" >H</td>
-      <td class="cell" id="c3" onClick="takeTurn(this.id)" >H</td>
+      <td class="cell" id="c1" onClick="takeTurn(this.id)" ></td>
+      <td class="cell" id="c2" onClick="takeTurn(this.id)" ></td>
+      <td class="cell" id="c3" onClick="takeTurn(this.id)" ></td>
     </tr>
   </table>
+</div>
 </body>
 </html>
