@@ -10,13 +10,11 @@ let textInput = $("#textBoard").val();
 
   let httpRequest;
 
-  let reqGet = function () {
+  let reqGet = function (props) {
     $.ajax({
-      url:'/test', 
+      url:'http://localhost:3000/lastInput', 
       type: 'GET',
       success: function (data) {
-        $("#board").empty();
-        $("#board").append(`<p>Change this with the response results</p>`)
         console.log('success from ajax get');
         //$("#board").html(result)? 
       },
@@ -29,20 +27,22 @@ let textInput = $("#textBoard").val();
 
   let reqPost = function (data) {
     $.ajax({
-      url: '/',
+      url: 'http://localhost:3000/',
       data: JSON.stringify(data) ,
       contentType: 'application/json', 
       type: 'POST',
-      success: function() {
-        console.log('POST success log, data JSON.str->', JSON.stringify(data)) ;
+      success: function(response) {
+      console.log('this is the response', response);// parse it
+      $("#board").empty();
+      $("#board").append("<p>" + response + "</p>")
       },
       error: function (jqXhr, textStatus, errorThrown ){
-       console.log('POST error log, data JSON.stringify->', JSON.stringify(data));
+        console.log('this------error post');
       }
     });
   }
 
-document.getElementById('button').addEventListener('click', ()=>{reqPost($("#textBoard").val())});
+document.getElementById('button').addEventListener('click', ()=>{ reqPost( { value : $("#textBoard").val() }) });
 
 
 
