@@ -1,37 +1,21 @@
-const express = require('express')
-const app = express()
+const express = require('express');
+const app = express();
+var bodyParser = require('body-parser');
 
-app.get('/', (req, res) => res.send('Hello World!'))
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
-app.listen(3000, () => console.log('Example app listening on port 3000!'))
+app.listen(3000)
 
+app.use(express.static('client'));
 
-
-
-
-
-
-
-
-
-// const http = require('http');
-// const fs = require ('fs');
-
-// const hostname = '120.0.0.1';
-// const port = 3000;
-
-// const server = http.createServer((req, res) => {
-
-//   res.statusCode = 200;
-//   re.setHeader('Content-Type', 'text/plain');  // <----------are these correct?
-//   res.end('Hello World\n');
+app.get('/test', function (req, res) {
+  console.log('log from GET server app', req.body);
+    res.send( './client/index.html');  
+  });
   
-// });
-
-
-// server.listen(port,hostname, () => {
-  
-//   console.log(`Server running at http://${hostname}:${port}/`);
-
-// });
+app.post('*', function (req, res) {  
+  console.log('this is a log from the post server function req-> ', req.body);
+  res.end('you posted something');
+});
 
