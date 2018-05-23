@@ -1,0 +1,20 @@
+{
+  "name": "challenge_3",
+  "version": "1.0.0",
+  "description": "miniAppChallengeThree",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "tonaramos",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "mongodb": "^3.1.0-beta4"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "nodemon": "^1.17.5"
+  }
+}
